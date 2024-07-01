@@ -3,7 +3,10 @@
 <body>
 <p id=ex > dummy</p>
 <script>
-    document.getElementById("ex").innerHTML="ok2"
+    var q=window.location.search;
+    var parse = new URLSearchParams(q);
+    var value= parse.get('q')
+    document.getElementById("ex").innerHTML="<input value="+value+" > </input>"
 </script>
 </body>
 </html>
